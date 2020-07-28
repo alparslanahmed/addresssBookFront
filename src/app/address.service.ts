@@ -10,8 +10,8 @@ export class AddressService {
   constructor(private http: HttpClient) {
   }
 
-  index() {
-    return this.http.get('api/address');
+  index(person_id) {
+    return this.http.get('api/person_addresses/' + person_id);
   }
 
   get(id) {

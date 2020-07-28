@@ -50,7 +50,7 @@ export class AddressComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.personService.get(id).subscribe(res => this.person = res["data"]);
 
-    this.addressService.index().subscribe(res => {
+    this.addressService.index(id).subscribe(res => {
       this.dataSource = res["data"];
     })
   }
